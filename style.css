@@ -1,0 +1,18 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+p {
+color:red;
+}
+
+.more-content {
+  background-color:blue;
+}
+p.more-content {
+  background-color:purple;
+}
+
+#some-more-content {
+  background-color:green;
+}
