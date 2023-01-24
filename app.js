@@ -1,63 +1,62 @@
 "use strict";
 function titleCase(str) {
-  str.toLowerCase();
-  let strAr = str.split(" ");
-  for (let i = 0; i < strAr.length; i++) {
-    strAr[i].charAt(0).toUpperCase();
+  str = str.split(' ');
+  let title ="";
+  let result = [];
+  for(let i = 0; i < str.length; i++){
+    title = str[i].toLowerCase();
+    result.push(title[0].toUpperCase()+title.slice(1));
   }
-  str = strAr.join(" ");
-  return str;
+  return result.join(' ');
 }
-
-
 let myName = prompt ("What is your name?");
-switch (titleCase(myName)) {
-case "Peter":
-  console.log("I like you, " + myName + " I like your face.");
+switch (myName.toLowerCase()) {
+case "peter":
+  alert("I like you, " + titleCase(myName) + " I like your face.");
   break;
 default:
-  console.log("Welcome to my about me page, " + myName);
+  alert("Welcome to my about me page " + titleCase(myName) + ".");
 }
-let nameBye =("Thank you for visiting my about page " + myName);
+let nameBye =("Thank you for visiting my about page " + titleCase(myName) + ".");
 
 let question1 = confirm("Are you smiling inside today?");
 
 if (question1 === true) {
-  console.log("Awesome! Never change");
+  alert("Awesome! Never change");
 } else {
-  console.log("That's a shame, I hope you find your inner happy.");
+  alert("That's a shame, I hope you find your inner happy.");
 }
 
 let question2 = confirm("Are you seated comfortably?");
 
 if (question2 === true) {
-  console.log("Great, hold that pose!");
+  alert("Great, hold that pose!");
 } else {
-  console.log("Have a stretch and get comfy!");
+  alert("Have a stretch and get comfy!");
 }
 
 let question3 = confirm("Are you hydrated?");
 
 if (question3 === true) {
-  console.log("HYDRO HOMIESSSS!");
+  alert("HYDRO HOMIESSSS!");
 } else {
-  console.log("Fetch a glass of water, dehydration makes mistakes!");
+  alert("Fetch a glass of water, dehydration makes mistakes!");
 }
 
 let question4 = confirm("Have you eaten breakfast?");
 
 if (question4 === true) {
-  console.log("Good going, you are ready to face the day.");
+  alert("Good going, you are ready to face the day.");
 } else {
-  console.log("You're not you when you're hungry.");
+  alert("You're not you when you're hungry.");
 }
 
 let question5 = confirm("Are you ready to code?");
 
 if (question5 === true) {
-  console.log("Code . and may the bugs be ever in your favour.");
+  alert("Code . and may the bugs be ever in your favour.");
 } else {
-  console.log("Maybe I can help with that?");
+  alert("Maybe I can help with that?");
 }
 
 let day = prompt("What is your favourite day of the week?");
@@ -67,27 +66,27 @@ let day = prompt("What is your favourite day of the week?");
 
 switch (day.toLowerCase()) {
 case "monday":
-  console.log("Your favourite day is monday? We are not friends.");
+  alert("Your favourite day is monday? We are not friends.");
   break;
 case "tuesday":
-  console.log("You are clearly full of grace");
+  alert("You are clearly full of grace");
   break;
 case "wednesday":
-  console.log("It is wednesday my dude.");
+  alert("It is wednesday my dude.");
   break;
 case "thursday":
-  console.log("Tuesday is THOR'S day!");
+  alert("Tuesday is THOR'S day!");
   break;
 case "friday":
-  console.log("You must be loving and giving.");
+  alert("You must be loving and giving.");
   break;
 case "saturday":
-  console.log("You must work hard.");
+  alert("You must work hard.");
   break;
 case "sunday":
-  console.log("You are bonny and blithe, good and gay!");
+  alert("You are bonny and blithe, good and gay!");
   break;
 default:
-  console.log("Unknown day, maybe you love them all?");
+  alert("Unknown day, maybe you love them all?");
 }
-console.log(nameBye);
+alert(nameBye);

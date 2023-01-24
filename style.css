@@ -1,18 +1,23 @@
+body {
+  background-color:#747fbc;
+}
 h1 {
   font-family: Arial, Helvetica, sans-serif;
+  background-color:#0e1a5b;
+  color:gold;
 } 
 
 p {
-color:red;
+color:#f2ffa7;
 }
 
 .more-content {
-  background-color:blue;
+  background-color:#1F2D75;
 }
 p.more-content {
-  background-color:purple;
+  background-color:#33418D;
 }
 
 #some-more-content {
-  background-color:green;
+  background-color:#4C599F;
 }
