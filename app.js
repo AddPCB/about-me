@@ -22,7 +22,7 @@ case "peter":
 default:
   alert("Welcome to my about me page " + titleCase(myName) + ".");
 }
-
+console.log("User is called " + myName + ".");
 let question1 = confirm("Are you smiling inside today?");
 
 if (question1 === true) {
@@ -31,7 +31,7 @@ if (question1 === true) {
 } else {
   alert("That's a shame, I hope you find your inner happy.");
 }
-
+console.log("User smiling:" + question1);
 let question2 = confirm("Are you seated comfortably?");
 
 if (question2 === true) {
@@ -40,7 +40,7 @@ if (question2 === true) {
 } else {
   alert("Have a stretch and get comfy!");
 }
-
+console.log("User seated comfortably: " + question2 + ".");
 let question3 = confirm("Are you hydrated?");
 
 if (question3 === true) {
@@ -49,7 +49,7 @@ if (question3 === true) {
 } else {
   alert("Fetch a glass of water, dehydration makes mistakes!");
 }
-
+console.log("User hydrated: " + question3 + ".");
 let question4 = confirm("Have you eaten breakfast?");
 
 if (question4 === true) {
@@ -58,7 +58,7 @@ if (question4 === true) {
 } else {
   alert("You're not you when you're hungry.");
 }
-
+console.log("User fed: " + question4 + ".");
 let question5 = prompt("What is your favourite day of the week?");
 
 // one way of making lowercase
@@ -66,30 +66,31 @@ let question5 = prompt("What is your favourite day of the week?");
 
 switch (question5.toLowerCase()) {
 case "monday":
-  alert("Your favourite day is monday? We are not friends.");
+  alert("Your favourite day is " + titleCase(question5) + "? We are not friends.");
   break;
 case "tuesday":
-  alert("You are clearly full of grace");
+  alert(titleCase(question5) + "? You are clearly full of grace.");
   break;
 case "wednesday":
-  alert("It is wednesday my dude.");
+  alert("It is " + titleCase(question5) + " my dude.");
   correctAnswers++;
   break;
 case "thursday":
-  alert("Tuesday is THOR'S day!");
+  alert(titleCase(question5) + " is THOR'S day!");
   break;
 case "friday":
-  alert("You must be loving and giving.");
+  alert(titleCase(question5) + "? You must be loving and giving.");
   break;
 case "saturday":
-  alert("You must work hard.");
+  alert(titleCase(question5) + "? You must work hard.");
   break;
 case "sunday":
-  alert("You are bonny and blithe, good and gay!");
+  alert(titleCase(question5) + "? You are bonny and blithe, good and gay!");
   break;
 default:
   alert("Unknown day, maybe you love them all?");
 }
+console.log("User's favourite day: " + titleCase(question5) + ".");
 
 // Question 6: Numeric input
 let question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Two digit number between 40 and 50.");
@@ -99,11 +100,11 @@ let q6Attempts = 3;
 while (question6 != 42 && q6Attempts > 0) {
   alert("Sorry, that isn't correct. " + q6Attempts + " attempts remaining.");
   if (question6 < 42) {
-    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a little higher");
+    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a little higher.");
   } else if (question6 > 42) {
-    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a little lower");
+    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a little lower.");
   } else {
-    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a two-digit number");
+    question6 = prompt("What is the answer to Life, The universe, and everything? Hint: Try guessing a two-digit number.");
   }
   q6Attempts--;
 }
@@ -115,6 +116,7 @@ if (question6 == 42) {
 } else {
   alert("Sorry, you have 0 attempts left. The correct answer is 42!");
 }
+console.log("User's answer to life: " + question6 + ". Attempts remaining: " + q6Attempts + ".");
 
 // Question 7: Multiple correct answers
 let answers7 = ["red", "blue", "green"];
@@ -130,12 +132,14 @@ while (!answers7.includes(question7) && q7Attempts > 0) {
 
 // increment correctAnswers when correct
 if (answers7.includes(question7)) {
-  alert("You guessed correctly with "+ q7Attempts + " attempts remaining. Correct answers were: " + answers7.join(", ") + ".");
+  alert("You guessed correctly with "+ q7Attempts + " attempts remaining. Correct answers were: " + titleCase(answers7.join(", ")) + ".");
   correctAnswers++;
 } else {
-  alert("Sorry, you have no attempts left. Correct answers were: " + answers7.join(", ") + ".");
+  alert("Sorry, you have no attempts left. Correct answers were: " + titleCase(answers7.join(", ")) + ".");
 }
-let nameBye =("Thank you for visiting my about page " + titleCase(myName) + "You got " + correctAnswers + " out of 7 correct!");
+console.log("Colour picked: " + question7 + ". Attempts remaining: " + q7Attempts + ".");
+console.log(myName + " scored " + correctAnswers + "points out of 7.");
+let nameBye =("Thank you for visiting my about page " + titleCase(myName) + ". You got " + correctAnswers + " out of 7 correct!");
 
 // show score
 alert(nameBye);
