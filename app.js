@@ -10,28 +10,44 @@ function titleCase(str) {
   }
   return result.join(" ");
 }
-// Create a variable to store the correct answers
+// Create a variable to store the number of correct answers
+
 let correctAnswers = 0;
 
-// Ask user name
-let myName = prompt("What is your name?");
-switch (myName.toLowerCase()) {
-case "peter":
-  alert("I like you, " + titleCase(myName) + " I like your face.");
-  break;
-default:
-  alert("Welcome to my about me page " + titleCase(myName) + ".");
-}
-console.log("User is called " + myName + ".");
-let question1 = confirm("Are you smiling inside today?");
+// Create a variable to store the user's name
 
-if (question1 === true) {
-  alert("Awesome! Never change");
-  correctAnswers++;
-} else {
-  alert("That's a shame, I hope you find your inner happy.");
+let myName;
+
+// Ask user name
+
+function qName(){
+  let myName = prompt("What is your name?");
+  switch (myName.toLowerCase()) {
+  case "peter":
+    alert("I like you, " + titleCase(myName) + " I like your face.");
+    break;
+  default:
+    alert("Welcome to my about me page " + titleCase(myName) + ".");
+  }
+  console.log("User is called " + myName + ".");
 }
-console.log("User smiling:" + question1);
+qName();
+
+// q1 ask if user is smiling
+
+function q1(){
+  let question1 = confirm("Are you smiling inside today?");
+
+  if (question1 === true) {
+    alert("Awesome! Never change");
+    correctAnswers++;
+  } else {
+    alert("That's a shame, I hope you find your inner happy.");
+  }
+  console.log("User smiling:" + question1 + ".");
+}
+q1();
+
 let question2 = confirm("Are you seated comfortably?");
 
 if (question2 === true) {
@@ -41,6 +57,8 @@ if (question2 === true) {
   alert("Have a stretch and get comfy!");
 }
 console.log("User seated comfortably: " + question2 + ".");
+
+
 let question3 = confirm("Are you hydrated?");
 
 if (question3 === true) {
@@ -50,6 +68,7 @@ if (question3 === true) {
   alert("Fetch a glass of water, dehydration makes mistakes!");
 }
 console.log("User hydrated: " + question3 + ".");
+
 let question4 = confirm("Have you eaten breakfast?");
 
 if (question4 === true) {
