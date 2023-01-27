@@ -82,15 +82,22 @@ function q3() {
 }
 q3();
 
-let question4 = confirm("Have you eaten breakfast?");
+// q4 ask if user has eaten.
 
-if (question4 === true) {
-  alert("Good going, you are ready to face the day.");
-  correctAnswers++;
-} else {
-  alert("You're not you when you're hungry.");
+function q4() {
+
+  let question4 = confirm("Have you eaten breakfast?");
+
+  if (question4 === true) {
+    alert("Good going, you are ready to face the day.");
+    correctAnswers++;
+  } else {
+    alert("You're not you when you're hungry.");
+  }
+  console.log("User fed: " + question4 + ".");
 }
-console.log("User fed: " + question4 + ".");
+q4();
+
 let question5 = prompt("What is your favourite day of the week?");
 
 // one way of making lowercase
