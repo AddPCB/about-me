@@ -36,6 +36,7 @@ qName();
 // q1 ask if user is smiling
 
 function q1(){
+
   let question1 = confirm("Are you smiling inside today?");
 
   if (question1 === true) {
@@ -51,6 +52,7 @@ q1();
 // q2 ask if user is sitting comfortably.
 
 function q2() {
+
   let question2 = confirm("Are you seated comfortably?");
 
   if (question2 === true) {
@@ -63,15 +65,22 @@ function q2() {
 }
 q2();
 
-let question3 = confirm("Are you hydrated?");
+// q3 ask if user is hydrated.
 
-if (question3 === true) {
-  alert("HYDRO HOMIESSSS!");
-  correctAnswers++;
-} else {
-  alert("Fetch a glass of water, dehydration makes mistakes!");
+function q3() {
+
+  let question3 = confirm("Are you hydrated?");
+
+  if (question3 === true) {
+    alert("HYDRO HOMIESSSS!");
+    correctAnswers++;
+  } else {
+    alert("Fetch a glass of water, dehydration makes mistakes!");
+  }
+  console.log("User hydrated: " + question3 + ".");
+
 }
-console.log("User hydrated: " + question3 + ".");
+q3();
 
 let question4 = confirm("Have you eaten breakfast?");
 
