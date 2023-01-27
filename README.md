@@ -15,3 +15,5 @@
 - Added lighthouse accessibility score for completed lab02 about page:
 
 ![Lighthouse score](images/lighthouse1.png)
+
+Andy Hutton 27-01-2023
