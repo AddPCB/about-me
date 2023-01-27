@@ -48,16 +48,20 @@ function q1(){
 }
 q1();
 
-let question2 = confirm("Are you seated comfortably?");
+// q2 ask if user is sitting comfortably.
 
-if (question2 === true) {
-  alert("Great, hold that pose!");
-  correctAnswers++;
-} else {
-  alert("Have a stretch and get comfy!");
+function q2() {
+  let question2 = confirm("Are you seated comfortably?");
+
+  if (question2 === true) {
+    alert("Great, hold that pose!");
+    correctAnswers++;
+  } else {
+    alert("Have a stretch and get comfy!");
+  }
+  console.log("User seated comfortably: " + question2 + ".");
 }
-console.log("User seated comfortably: " + question2 + ".");
-
+q2();
 
 let question3 = confirm("Are you hydrated?");
 
