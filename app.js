@@ -137,50 +137,56 @@ q5();
 
 // Q6 ask user to guess a number
 
-let question6 = prompt(
-  "What is the answer to Life, The universe, and everything? Hint: Two digit number between 40 and 50."
-);
-let q6Attempts = 3;
+function q6() {
 
-// Check if the answer is correct
-while (question6 != 42 && q6Attempts > 0) {
-  alert("Sorry, that isn't correct. " + q6Attempts + " attempts remaining.");
-  if (question6 < 42) {
-    question6 = prompt(
-      "What is the answer to Life, The universe, and everything? Hint: Try guessing a little higher."
-    );
-  } else if (question6 > 42) {
-    question6 = prompt(
-      "What is the answer to Life, The universe, and everything? Hint: Try guessing a little lower."
-    );
-  } else {
-    question6 = prompt(
-      "What is the answer to Life, The universe, and everything? Hint: Try guessing a two-digit number."
-    );
+  let question6 = prompt(
+    "What is the answer to Life, The universe, and everything? Hint: Two digit number between 40 and 50."
+  );
+  let q6Attempts = 3;
+
+  // Check if the answer is correct
+  while (question6 != 42 && q6Attempts > 0) {
+    alert("Sorry, that isn't correct. " + q6Attempts + " attempts remaining.");
+    if (question6 < 42) {
+      question6 = prompt(
+        "What is the answer to Life, The universe, and everything? Hint: Try guessing a little higher."
+      );
+    } else if (question6 > 42) {
+      question6 = prompt(
+        "What is the answer to Life, The universe, and everything? Hint: Try guessing a little lower."
+      );
+    } else {
+      question6 = prompt(
+        "What is the answer to Life, The universe, and everything? Hint: Try guessing a two-digit number."
+      );
+    }
+    q6Attempts--;
   }
-  q6Attempts--;
-}
 
-// increment correctAnswers when correct
-if (question6 == 42) {
-  correctAnswers++;
-  alert(
-    "Congratulations, the answer is 42! You had " +
+  // increment correctAnswers when correct
+  if (question6 == 42) {
+    correctAnswers++;
+    alert(
+      "Congratulations, the answer is 42! You had " +
       q6Attempts +
       " attempts left."
-  );
-} else {
-  alert("Sorry, you have 0 attempts left. The correct answer is 42!");
-}
-console.log(
-  "User's answer to life: " +
+    );
+  } else {
+    alert("Sorry, you have 0 attempts left. The correct answer is 42!");
+  }
+  console.log(
+    "User's answer to life: " +
     question6 +
     ". Attempts remaining: " +
     q6Attempts +
     "."
-);
+  );
+}
+
+q6();
 
 // Question 7: Multiple correct answers
+
 let answers7 = ["red", "blue", "green"];
 let question7 = prompt("Guess one of my favourite colours?").toLowerCase();
 let q7Attempts = 5;
