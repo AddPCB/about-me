@@ -16,6 +16,10 @@
 
 ![Lighthouse score](images/lighthouse1.png)
 
+<<<<<<< HEAD
 - Added second lighthouse accessibility score for completed lab03:
 
 ![Lighthouse score](images/lighthouse2.png)
+=======
+Andy Hutton 27-01-2023
+>>>>>>> 7b31163cd9af08b4f08f000ab89717686924485e
