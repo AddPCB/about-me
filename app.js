@@ -185,41 +185,45 @@ function q6() {
 
 q6();
 
-// Question 7: Multiple correct answers
+// q7 Multiple correct answers
 
-let answers7 = ["red", "blue", "green"];
-let question7 = prompt("Guess one of my favourite colours?").toLowerCase();
-let q7Attempts = 5;
+function q7() {
 
-// Check if the answer is correct
-while (!answers7.includes(question7) && q7Attempts > 0) {
-  alert("Sorry, that isn't correct. " + q7Attempts + " attempts remaining.");
-  question7 = prompt(
-    "Guess one of my favourite colours? Hint: Try a primary colour."
-  ).toLowerCase();
-  q7Attempts--;
-}
+  let answers7 = ["red", "blue", "green"];
+  let question7 = prompt("Guess one of my favourite colours?").toLowerCase();
+  let q7Attempts = 5;
 
-// increment correctAnswers when correct
-if (answers7.includes(question7)) {
-  alert(
-    "You guessed correctly with " +
+  // Check if the answer is correct
+  while (!answers7.includes(question7) && q7Attempts > 0) {
+    alert("Sorry, that isn't correct. " + q7Attempts + " attempts remaining.");
+    question7 = prompt(
+      "Guess one of my favourite colours? Hint: Try a primary colour."
+    ).toLowerCase();
+    q7Attempts--;
+  }
+
+  // increment correctAnswers when correct
+  if (answers7.includes(question7)) {
+    alert(
+      "You guessed correctly with " +
       q7Attempts +
       " attempts remaining. Correct answers were: " +
       titleCase(answers7.join(", ")) +
       "."
-  );
-  correctAnswers++;
-} else {
-  alert(
-    "Sorry, you have no attempts left. Correct answers were: " +
+    );
+    correctAnswers++;
+  } else {
+    alert(
+      "Sorry, you have no attempts left. Correct answers were: " +
       titleCase(answers7.join(", ")) +
       "."
+    );
+  }
+  console.log(
+    "Colour picked: " + question7 + ". Attempts remaining: " + q7Attempts + "."
   );
 }
-console.log(
-  "Colour picked: " + question7 + ". Attempts remaining: " + q7Attempts + "."
-);
+q7();
 console.log(myName + " scored " + correctAnswers + "points out of 7.");
 let nameBye =
   "Thank you for visiting my about page " +
