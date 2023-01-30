@@ -15,3 +15,7 @@
 - Added lighthouse accessibility score for completed lab02 about page:
 
 ![Lighthouse score](images/lighthouse1.png)
+
+- Added second lighthouse accessibility score for completed lab03:
+
+![Lighthouse score](images/lighthouse2.png)
