@@ -20,7 +20,7 @@ let myName;
 
 // Ask user name
 
-function qName(){
+function qName() {
   let myName = prompt("What is your name?");
   switch (myName.toLowerCase()) {
   case "peter":
@@ -35,8 +35,7 @@ qName();
 
 // q1 ask if user is smiling
 
-function q1(){
-
+function q1() {
   let question1 = confirm("Are you smiling inside today?");
 
   if (question1 === true) {
@@ -52,7 +51,6 @@ q1();
 // q2 ask if user is sitting comfortably.
 
 function q2() {
-
   let question2 = confirm("Are you seated comfortably?");
 
   if (question2 === true) {
@@ -68,7 +66,6 @@ q2();
 // q3 ask if user is hydrated.
 
 function q3() {
-
   let question3 = confirm("Are you hydrated?");
 
   if (question3 === true) {
@@ -78,14 +75,12 @@ function q3() {
     alert("Fetch a glass of water, dehydration makes mistakes!");
   }
   console.log("User hydrated: " + question3 + ".");
-
 }
 q3();
 
 // q4 ask if user has eaten.
 
 function q4() {
-
   let question4 = confirm("Have you eaten breakfast?");
 
   if (question4 === true) {
@@ -98,42 +93,50 @@ function q4() {
 }
 q4();
 
-let question5 = prompt("What is your favourite day of the week?");
+// q5 ask favourite day.
 
-// one way of making lowercase
-// colour = colour.toLowerCase();
+function q5() {
+  let question5 = prompt("What is your favourite day of the week?");
 
-switch (question5.toLowerCase()) {
-case "monday":
-  alert(
-    "Your favourite day is " + titleCase(question5) + "? We are not friends."
-  );
-  break;
-case "tuesday":
-  alert(titleCase(question5) + "? You are clearly full of grace.");
-  break;
-case "wednesday":
-  alert("It is " + titleCase(question5) + " my dude.");
-  correctAnswers++;
-  break;
-case "thursday":
-  alert(titleCase(question5) + " is THOR'S day!");
-  break;
-case "friday":
-  alert(titleCase(question5) + "? You must be loving and giving.");
-  break;
-case "saturday":
-  alert(titleCase(question5) + "? You must work hard.");
-  break;
-case "sunday":
-  alert(titleCase(question5) + "? You are bonny and blithe, good and gay!");
-  break;
-default:
-  alert("Unknown day, maybe you love them all?");
+  // one way of making lowercase
+  // colour = colour.toLowerCase();
+
+  switch (question5.toLowerCase()) {
+  case "monday":
+    alert(
+      "Your favourite day is " +
+          titleCase(question5) +
+          "? We are not friends."
+    );
+    break;
+  case "tuesday":
+    alert(titleCase(question5) + "? You are clearly full of grace.");
+    break;
+  case "wednesday":
+    alert("It is " + titleCase(question5) + " my dude.");
+    correctAnswers++;
+    break;
+  case "thursday":
+    alert(titleCase(question5) + " is THOR'S day!");
+    break;
+  case "friday":
+    alert(titleCase(question5) + "? You must be loving and giving.");
+    break;
+  case "saturday":
+    alert(titleCase(question5) + "? You must work hard.");
+    break;
+  case "sunday":
+    alert(titleCase(question5) + "? You are bonny and blithe, good and gay!");
+    break;
+  default:
+    alert("Unknown day, maybe you love them all?");
+  }
+  console.log("User's favourite day: " + titleCase(question5) + ".");
 }
-console.log("User's favourite day: " + titleCase(question5) + ".");
+q5();
 
-// Question 6: Numeric input
+// Q6 ask user to guess a number
+
 let question6 = prompt(
   "What is the answer to Life, The universe, and everything? Hint: Two digit number between 40 and 50."
 );
